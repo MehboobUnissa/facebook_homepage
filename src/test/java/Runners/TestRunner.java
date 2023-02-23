@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features",
         glue = "Steps", publish = true,
-        plugin = {"pretty","html:target/cucumber-reports.html"},
+        plugin = {"pretty","json:target/cucumber-reports.json"},
         monochrome = true)
 public class TestRunner extends AbstractTestNGCucumberTests {
 
