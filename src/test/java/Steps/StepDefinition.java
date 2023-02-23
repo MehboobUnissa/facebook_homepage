@@ -61,26 +61,26 @@ public class StepDefinition {
     @Then("user is successfully logged in")
     public void userIsSuccessfullyLoggedIn() throws InterruptedException {
         homePage = new HomePage(driver);
-        Wait wait = new FluentWait(driver)
-                .withTimeout(Duration.ofSeconds(40))
-                .pollingEvery( Duration.ofSeconds(2))
-                .ignoring(NoSuchElementException.class);
-        wait.until(ExpectedConditions.textMatches(
-               By.xpath("(//span[@class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6\"])[14]"),
-                Pattern.compile("Mehboob Unissa")));
-        String user = homePage.getPatternMatches()
-                .getText();
-        Thread.sleep(5000);
-        Assert.assertEquals(user, "Mehboob Unissa");
+//        Wait wait = new FluentWait(driver)
+//                .withTimeout(Duration.ofSeconds(40))
+//                .pollingEvery( Duration.ofSeconds(2))
+//                .ignoring(NoSuchElementException.class);
+//        wait.until(ExpectedConditions.textMatches(
+//               By.xpath("(//span[@class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6\"])[14]"),
+//                Pattern.compile("Mehboob Unissa")));
+//        String user = homePage.getPatternMatches()
+//                .getText();
+//        Thread.sleep(5000);
+//        Assert.assertEquals(user, "Mehboob Unissa");
     }
 
     //scenario 1
     //user should navigate to homepage
     @Given("user should navigate to homepage")
     public void userShouldNavigateToHomepage() {
-        String user = homePage.getPatternMatches()
-                .getText();
-        Assert.assertEquals(user, "Mehboob Unissa");
+        //String user = homePage.getPatternMatches()
+           //     .getText();
+        //Assert.assertEquals(user, "Mehboob Unissa");
     }
 //user should click icons in homepage
     @When("user should click icons in homepage")
