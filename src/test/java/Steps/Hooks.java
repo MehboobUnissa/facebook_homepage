@@ -17,7 +17,7 @@ public class Hooks {
         this.browserManager=browserManager;
 
     }
-    @Before(order=0.)
+    @Before(order=0)
     public void setUp(){
         browserManager.setDriver();
     }
