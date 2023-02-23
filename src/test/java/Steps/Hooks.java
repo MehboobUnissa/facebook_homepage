@@ -17,19 +17,19 @@ public class Hooks {
         this.browserManager=browserManager;
 
     }
-    @Before
+    @Before(order=0.)
     public void setUp(){
         browserManager.setDriver();
     }
 
-    //@After(order=1)
-  //  public void takeScreenShot(Scenario scenario) {
-//        if(scenario.isFailed()){
-//            TakesScreenshot ts = (TakesScreenshot) browserManager.getDriver();
-//            byte[] src = ts.getScreenshotAs(OutputType.BYTES);
-//            scenario.attach(src, "image/png","screenshot");
-      //  }
-//    }
+    @After(order=1)
+    public void takeScreenShot(Scenario scenario) {
+        if(scenario.isFailed()){
+            TakesScreenshot ts = (TakesScreenshot) browserManager.getDriver();
+            byte[] src = ts.getScreenshotAs(OutputType.BYTES);
+            scenario.attach(src, "image/png","screenshot");
+        }
+}
 
     @After(order=0)
     public void tearDown(){
