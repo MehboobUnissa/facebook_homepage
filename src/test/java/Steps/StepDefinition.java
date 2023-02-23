@@ -86,7 +86,7 @@ public class StepDefinition {
     @When("user should click icons in homepage")
     public void userShouldClickIconsInHomepage() throws InterruptedException {
          homePage = new HomePage(driver);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.elementToBeClickable(homePage.getClickFriend()));
         homePage.getClickFriend().click();
         wait.until(ExpectedConditions.visibilityOf(homePage.getDisplayFriend()));

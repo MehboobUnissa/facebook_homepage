@@ -6,6 +6,7 @@ Feature: User should be able to click and access functionalities of Facebook Hom
     When user enters login credentials
     Then user is successfully logged in
 
+  @smoke
   Scenario: User should be able to click icons in homepage
     Given user should navigate to homepage
     When user should click icons in homepage
@@ -29,7 +30,7 @@ Feature: User should be able to click and access functionalities of Facebook Hom
     When user is able to click on Like and Comment button
     Then post should be Liked and Comment should be displayed
 
-  @smoke
+
   Scenario: User should be able to create group
     Given user is able to click on create group
     When user is able to add two or more friends
