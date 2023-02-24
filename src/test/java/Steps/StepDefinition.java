@@ -186,7 +186,8 @@ public class StepDefinition {
         Assert.assertTrue(homePage.getLiveClicked().isDisplayed());
         Assert.assertTrue(homePage.getPhotoClicked().isDisplayed());
         Assert.assertTrue(homePage.getReactClicked().isDisplayed());
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
+        // new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(driver.get(url)));
         Assert.assertTrue(driver.getCurrentUrl().contains(url));
      }
 
