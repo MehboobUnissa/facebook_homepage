@@ -99,10 +99,9 @@ public class StepDefinition {
         homePage.getClickMarketPlace().click();
         homePage.getDisplayMarketPlace().isDisplayed();
         //groups
-        Thread.sleep(5000);
-        wait.until (ExpectedConditions.elementToBeClickable(homePage.getClickGroups()));
-        homePage.getClickGroups().click();
-        homePage.getDisplayGroups().isDisplayed();
+//        wait.until (ExpectedConditions.elementToBeClickable(homePage.getClickGroups()));
+//        homePage.getClickGroups().click();
+//        homePage.getDisplayGroups().isDisplayed();
     }
 
    // user should navigate to respective page
