@@ -66,7 +66,7 @@ public class HomePage {
         return displayGroups;
     }
 
-    @FindBy(xpath = "//div[@class=\"x78zum5 xdt5ytf x10cihs4 x1t2pt76 x1n2onr6 x1ja2u2z\"]")
+    @FindBy(xpath = "//div[@class=\"x9f619 x1n2onr6 x1ja2u2z x2lah0s x1qjc9v5 x78zum5 x1q0g3np xl56j7k x8hhl5t x9otpla x1n0m28w x1wsgfga xp7jhwk\"]")
     private WebElement displayGroups;
 
 
@@ -113,7 +113,7 @@ public class HomePage {
     @FindBy(xpath = "(//div[@class=\"x1i10hfl x6umtig x1b1mbwd xaqea5y xav7gou x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8 x1hl2dhg xggy1nq x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x14yjl9h xudhj91 x18nykt9 xww2gxu x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 xc9qbxq x14qfxbe x1qhmfi1\"])[2]")
     private WebElement clickBack1;
 
-    @FindBy(xpath = " (//div[@class=\"x9f619 x1n2onr6 x1ja2u2z x78zum5 xdt5ytf x1iyjqo2 x2lwn1j\"])[5]")
+    @FindBy(xpath = "//div[@class=\"x1qjc9v5 x78zum5 xl56j7k x193iq5w x1t2pt76\"]")
     private WebElement liveClicked;
 
     @FindBy(xpath = " //div[@class=\"x6s0dn4 xua58t2 x9f619 x78zum5 xng8ra xl56j7k\"]")
@@ -182,7 +182,7 @@ public class HomePage {
     @FindBy(xpath = "//div[@class=\"xzsf02u x1a2a7pz x1n2onr6 x14wi4xw notranslate\"]")
     private WebElement postCommented;
 
-    @FindBy(xpath = "(//div[@class=\"x6s0dn4 x1q0q8m5 x1qhh985 xu3j5b3 xcfux6l x26u7qi xm0m39n x13fuv20 x972fbf x9f619 x78zum5 x1q0g3np x1iyjqo2 xs83m0k x1qughib xat24cr x11i5rnm x1mh8g0r xdj266r xeuugli x18d9i69 x1sxyh0 xurb0ha xexx8yu x1n2onr6 x1ja2u2z x1gg8mnh\"])[50]")
+    @FindBy(xpath = "[//div[@class=\"x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip\"])[18]")
     private WebElement createGroup;
 
     @FindBy(xpath = "//div[@class=\"x6s0dn4 xcrg951 xgqcy7u x1lq5wgf x78zum5 x2lah0s x10w6t97 x1qughib x6ikm8r x10wlt62 x1y1aw1k x1sxyh0 xwib8y2 xurb0ha x1n2onr6 xhtitgo\"]")

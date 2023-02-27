@@ -16,7 +16,7 @@ Feature: User should be able to click and access functionalities of Facebook Hom
       When user is able to see stories and reels
       Then relevant story and reels should be displayed to user
 
-
+    @smoke
   Scenario: User should be able to access status tab in homepage
         Given user is able to click on live,add photos and react
         When user is able to access live,add photos and react
@@ -26,7 +26,6 @@ Feature: User should be able to click and access functionalities of Facebook Hom
     Given post should be displayed on homepage
     When user is able to click on Like and Comment button
     Then post should be Liked and Comment should be displayed
-
 
   Scenario: User should be able to create group
     Given user is able to click on create group
