@@ -6,8 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 import org.junit.runner.RunWith;
 import org.testng.annotations.DataProvider;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features",
+//@RunWith(Cucumber.class)
+@CucumberOptions(features = "src/test/resources/Features",
         glue = "Steps", publish = true,
         plugin = {"pretty","json:target/cucumber-reports.json"},
         monochrome = true, tags="@smoke")
