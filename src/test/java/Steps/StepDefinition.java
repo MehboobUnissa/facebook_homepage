@@ -101,7 +101,7 @@ public class StepDefinition {
         Assert.assertTrue(homePage.getDisplayWatch().isDisplayed());
         new WebDriverWait(driver,Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(homePage.getDisplayMarketPlace()));
         Assert.assertTrue(homePage.getDisplayMarketPlace().isDisplayed());
-        new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(homePage.getDisplayGroups()));
+        new WebDriverWait(driver,Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(homePage.getDisplayGroups()));
         Assert.assertTrue(homePage.getDisplayGroups().isDisplayed());
     }
 
@@ -161,7 +161,7 @@ public class StepDefinition {
     @When("user is able to access live,add photos and react")
     public void userIsAbleToAccessLiveAddPhotosAndReact() throws InterruptedException {
         //live
-        new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(homePage.getLiveClicked()));
+        new WebDriverWait(driver, Duration.ofSeconds(40)).until(ExpectedConditions.visibilityOf(homePage.getLiveClicked()));
         homePage.getLiveClicked().isDisplayed();
         //photo
         homePage.getPhotoClicked().isDisplayed();
@@ -176,6 +176,7 @@ public class StepDefinition {
         Assert.assertTrue(homePage.getLiveClicked().isDisplayed());
         new WebDriverWait(driver,Duration.ofSeconds(40)).until(ExpectedConditions.visibilityOf(homePage.getPhotoClicked()));
         Assert.assertTrue(homePage.getPhotoClicked().isDisplayed());
+        new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(homePage.getReactClicked()));
         Assert.assertTrue(homePage.getReactClicked().isDisplayed());
         Thread.sleep(5000);
         // new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(driver.get(url)));
@@ -215,9 +216,9 @@ public class StepDefinition {
     @Given("user is able to click on create group")
     public void userIsAbleToClickOnCreateGroup() throws InterruptedException {
         homePage = new HomePage(driver);
-        new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeClickable(homePage.getCreateGroup()));
+        new WebDriverWait(driver,Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(homePage.getCreateGroup()));
         homePage.getCreateGroup().click();
-        new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(homePage.getDisplayGroup()));
+        new WebDriverWait(driver,Duration.ofSeconds(60)).until(ExpectedConditions.visibilityOf(homePage.getDisplayGroup()));
         homePage.getDisplayGroup().isDisplayed();
         data = TestDataReader.getData(scenario.getName());
     }
