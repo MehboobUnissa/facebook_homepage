@@ -1,11 +1,9 @@
 Feature: User should be able to click and access functionalities of Facebook Homepage.
 
-
   Background: User is logged into facebook website.
     Given user open facebook login page
     When user enters login credentials
     Then user is successfully logged in
-
 
   Scenario: User should be able to click icons in homepage
     Given user should navigate to homepage
@@ -24,8 +22,6 @@ Feature: User should be able to click and access functionalities of Facebook Hom
         When user is able to access live,add photos and react
         Then relevant box is displayed in homepage to user
 
-
-    @smoke
   Scenario: User should be able to like and comment on posts
     Given post should be displayed on homepage
     When user is able to click on Like and Comment button

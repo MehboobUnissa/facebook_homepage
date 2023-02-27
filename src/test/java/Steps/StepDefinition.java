@@ -61,17 +61,7 @@ public class StepDefinition {
     @Then("user is successfully logged in")
     public void userIsSuccessfullyLoggedIn() throws InterruptedException {
         homePage = new HomePage(driver);
-//        Wait wait = new FluentWait(driver)
-//                .withTimeout(Duration.ofSeconds(40))
-//                .pollingEvery( Duration.ofSeconds(2))
-//                .ignoring(NoSuchElementException.class);
-//        wait.until(ExpectedConditions.textMatches(
-//               By.xpath("(//span[@class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6\"])[14]"),
-//                Pattern.compile("Mehboob Unissa")));
-//        String user = homePage.getPatternMatches()
-//                .getText();
-//        Thread.sleep(5000);
-//        Assert.assertEquals(user, "Mehboob Unissa");
+
     }
 
     //scenario 1
@@ -99,9 +89,9 @@ public class StepDefinition {
         homePage.getClickMarketPlace().click();
         homePage.getDisplayMarketPlace().isDisplayed();
         //groups
-//        wait.until (ExpectedConditions.elementToBeClickable(homePage.getClickGroups()));
-//        homePage.getClickGroups().click();
-//        homePage.getDisplayGroups().isDisplayed();
+        wait.until (ExpectedConditions.elementToBeClickable(homePage.getClickGroups()));
+        homePage.getClickGroups().click();
+        homePage.getDisplayGroups().isDisplayed();
     }
 
    // user should navigate to respective page
@@ -109,7 +99,7 @@ public class StepDefinition {
     public void userShouldNavigateToRespectivePage() throws InterruptedException {
         Assert.assertTrue(homePage.getDisplayFriend().isDisplayed());
         Assert.assertTrue(homePage.getDisplayWatch().isDisplayed());
-        new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(homePage.getDisplayMarketPlace()));
+        new WebDriverWait(driver,Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(homePage.getDisplayMarketPlace()));
         Assert.assertTrue(homePage.getDisplayMarketPlace().isDisplayed());
         new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(homePage.getDisplayGroups()));
         Assert.assertTrue(homePage.getDisplayGroups().isDisplayed());
@@ -184,9 +174,10 @@ public class StepDefinition {
     public void relevantBoxIsDisplayedInHomepageToUser() throws InterruptedException {
         new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(homePage.getLiveClicked()));
         Assert.assertTrue(homePage.getLiveClicked().isDisplayed());
+        new WebDriverWait(driver,Duration.ofSeconds(40)).until(ExpectedConditions.visibilityOf(homePage.getPhotoClicked()));
         Assert.assertTrue(homePage.getPhotoClicked().isDisplayed());
         Assert.assertTrue(homePage.getReactClicked().isDisplayed());
-        //Thread.sleep(5000);
+        Thread.sleep(5000);
         // new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(driver.get(url)));
         Assert.assertTrue(driver.getCurrentUrl().contains(url));
      }
