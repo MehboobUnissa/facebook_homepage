@@ -10,18 +10,17 @@ Feature: User should be able to click and access functionalities of Facebook Hom
     When user should click icons in homepage
     Then user should navigate to respective page
 
-
   Scenario: User should be able to click on stories and reels
       Given user should be able to click on story and reels
       When user is able to see stories and reels
       Then relevant story and reels should be displayed to user
 
-    @smoke
   Scenario: User should be able to access status tab in homepage
         Given user is able to click on live,add photos and react
         When user is able to access live,add photos and react
         Then relevant box is displayed in homepage to user
 
+    @smoke
   Scenario: User should be able to like and comment on posts
     Given post should be displayed on homepage
     When user is able to click on Like and Comment button
